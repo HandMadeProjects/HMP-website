@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="Static\CSS\tailwindcss.js"></script>
+    <link href="Static\CSS\daisyui.css" rel="stylesheet" type="text/css" />
+    <!-- Include Favicon -->
+    <link rel="icon" href="Static\images\hmp_logo.png" type="image/x-icon">
+
+    <title>HMP HandMadeProjects</title>
+  </head>
+  <body class="bg-gray-700">
+    <!-- Navbar -->
+    <nav class="hidden bg-gray-800 text-white p-4 fixed top-0 w-full">
+      <div class="container mx-auto">
+        <ul class="flex justify-center space-x-4">
+          <li><a href="#section1" class="hover:underline">Section 1</a></li>
+          <li><a href="#section2" class="hover:underline">Section 2</a></li>
+          <li><a href="#section3" class="hover:underline">Section 3</a></li>
+          <li><a href="#section4" class="hover:underline">Section 4</a></li>
+          <li><a href="#section5" class="hover:underline">Section 5</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav class="bg-gray-800 fixed top-0 w-full h-16 z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    
+          <a href="/" class="flex items-center">
+            <img src="Static\images\hmp_logo.png" class="h-8 mr-3" alt="HMP Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">HandMadeProjects</span>
+          </a>
+    
+          <button type="button"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 hover:bg-gray-800 focus:ring-gray-800"
+            onclick="toggleMenu()">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" id="menuBtn" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <svg class="w-6 h-6 hidden" id="closeBtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="#6563ff"
+                d="m13.414 12 3.293-3.293a1 1 0 0 0-1.414-1.414L12 10.586 8.707 7.293a1 1 0 0 0-1.414 1.414L10.586 12l-3.293 3.293a1 1 0 0 0 1.414 1.414L12 13.414l3.293 3.293a1 1 0 0 0 1.414-1.414Z">
+              </path>
+              <path fill="#b2b1ff"
+                d="M19.07 4.93A10 10 0 1 0 4.93 19.07 10 10 0 1 0 19.07 4.93Zm-2.363 10.363a1 1 0 1 1-1.414 1.414L12 13.414l-3.293 3.293a1 1 0 0 1-1.414-1.414L10.586 12 7.293 8.707a1 1 0 0 1 1.414-1.414L12 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414L13.414 12Z">
+              </path>
+            </svg>
+          </button>
+    
+    
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul
+              class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-gray-800 border-gray-700">
+              <li>
+                <a href="/"
+                  class="font-bold block py-2 px-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-300 md:hover:underline  md:hover:underline-offset-4 md:p-0 text-white md:dark:text-blue-300"
+                  aria-current="page">Home</a>
+              </li class="custom-link">
+              <li>
+                <a href="pages\projects.html"
+                  class="font-bold block py-2 px-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:hover:underline  md:hover:underline-offset-4 md:p-0 text-white hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent">Projects</a>
+              </li>
+    
+              <li>
+                <a href="pages\gallery.html"
+                  class="font-bold block py-2 px-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:hover:underline  md:hover:underline-offset-4 md:p-0 text-white hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent">Gallery</a>
+              </li>
+              <li>
+                <a href="pages\contact.html"
+                  class="font-bold block py-2 px-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:hover:underline  md:hover:underline-offset-4 md:p-0 text-white hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent">Contact</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Sections -->
+    <div id="section1" class="py-16 h-screen">
+      <div class="container mx-auto">
+        <!-- Content for Section 1 goes here -->
+        <div class="text-center md:my-56">
+          <div class="text-center">
+            <h1 class="text-4xl font-bold tracking-tight text-gray-300 sm:text-6xl">
+              <!-- Unlock Your Potential with Innovative Projects -->
+              Build Your Potfolio with Innovative Projects
+            </h1>
+            <p class="mt-6 text-lg leading-8 text-gray-300 lg:px-48 p-1 md:px-10">
+              "Welcome to HandMadeProjects, the ultimate destination for coding and
+              hardware enthusiasts seeking innovative and captivating projects. We are
+              thrilled to present a wide range of unique projects designed to ignite
+              your creativity, expand your technical skills, unlock your potential and
+              build a POWERFULL Potfolio."
+            </p>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+              <a
+                href="/projects"
+                class="flex mx-auto mt-4 md:mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                >Get started</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Content for Section 1 goes here -->
+      </div>
+    </div>
+
+    <div id="section2" class="py-16 h-screen">
+      <div class="container mx-auto">
+        <!-- Content for Section 2 goes here -->
+        <div>
+          <section class="text-gray-600 body-font">
+            <div class="container px-5 py-2 mx-auto">
+              <div class="text-center mb-20">
+                <h1
+                  class="sm:text-3xl text-2xl font-medium title-font text-gray-300 my-10 md:my-4"
+                >
+                  Project Domain
+                </h1>
+                <p
+                  class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-400"
+                >
+                  "We offer an extensive range of projects spanning three dynamic
+                  domains: computer science, electronics, and robotics. Explore,
+                  learn, and create in these exciting fields with our diverse
+                  collection of projects."
+                </p>
+                <div class="flex mt-6 justify-center">
+                  <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+                </div>
+              </div>
+              <div
+                class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6"
+              >
+                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                  <div
+                    class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-10 h-10"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="flex-grow">
+                    <h2 class="text-gray-200 text-lg title-font font-medium mb-3">
+                      Computer Science Projects
+                    </h2>
+                    <p class="leading-relaxed text-base text-gray-400 md:h-32">
+                      "Discover a treasure trove of coding projects at our online
+                      marketplace, where you can find a wide selection of innovative
+                      and engaging projects to fuel your coding passion."
+                    </p>
+                    <a
+                      href="/projectlist/computer-science"
+                      class="mt-3 text-indigo-400 inline-flex items-center"
+                      >
+                      <pre class="hover:underline">Learn More </pre>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                  <div
+                    class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-10 h-10"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="flex-grow">
+                    <h2 class="text-gray-200 text-lg title-font font-medium mb-3">
+                      Electronics Projects
+                    </h2>
+                    <p class="leading-relaxed text-base text-gray-400 md:h-32">
+                      "Unleash your inner engineer and dive into the world of
+                      electronics with our curated collection of projects. Find the
+                      perfect electronics projects to challenge your skills and
+                      satisfy your curiosity, available for purchase on our platform."
+                    </p>
+                    <a
+                      href="/projectlist/electronics"
+                      class="mt-3 text-indigo-400 inline-flex items-center"
+                      >                
+                      <pre class="hover:underline">Learn More </pre>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                  <div
+                    class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-10 h-10"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="flex-grow">
+                    <h2 class="text-gray-200 text-lg title-font font-medium mb-3">
+                      IoT Projects
+                    </h2>
+                    <p class="leading-relaxed text-base text-gray-400 md:h-32">
+                      "Explore a captivating array of cutting-edge robotics and IoT projects, igniting innovation and technology's boundaries. Embark on an exhilarating journey to create smarter and interconnected systems, shaping a world of endless possibilities."
+                    </p>
+                    <a
+                      href="/projectlist/iotproject"
+                      class="mt-3 text-indigo-400 inline-flex items-center"
+                      >
+                      <pre class="hover:underline">Learn More </pre>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>    
+        <!-- Content for Section 2 goes here -->
+      </div>
+    </div>
+
+    <div id="section3" class="py-16 h-screen">
+      <div class="container mx-auto">
+        <h1 class="text-2xl font-bold tracking-tight text-gray-400 sm:text-6xl text-center mt-20">Simple Steps to Follow</h1>
+        <!-- Content for Section 3 goes here -->
+        <section class="text-gray-600 body-font mt-16">
+          <div class="container px-5 py-2 mx-auto flex flex-wrap">
+            <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
+              <div
+                class="h-full w-6 absolute inset-0 flex items-center justify-center"
+              >
+                <div class="h-full w-1 bg-gray-400 pointer-events-none"></div>
+              </div>
+              <div
+                class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm"
+              >
+                1
+              </div>
+              <div
+                class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row"
+              >
+                <div
+                  class="flex-shrink-0 w-16 h-16 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-8 h-8"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                    />
+                  </svg>
+                </div>
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                  <h2 class="font-medium title-font text-gray-300 mb-1 text-xl">
+                    Search & Select Your Project
+                  </h2>
+                  <p class="leading-relaxed text-gray-400">
+                    "Search projects within your desired domain and explore our
+                    curated lists for computer science, electronics, and robotics.
+                    Find the perfect project to fuel your passion and dive into the
+                    world of innovation and creativity."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+              <div
+                class="h-full w-6 absolute inset-0 flex items-center justify-center"
+              >
+                <div class="h-full w-1 bg-gray-400 pointer-events-none"></div>
+              </div>
+              <div
+                class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm"
+              >
+                2
+              </div>
+              <div
+                class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row"
+              >
+                <div
+                  class="flex-shrink-0 w-16 h-16 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-8 h-8"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12"
+                    />
+                  </svg>
+                </div>
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                  <h2 class="font-medium title-font text-gray-300 mb-1 text-xl">
+                    Check All The Resources regarding the project..
+                  </h2>
+                  <p class="leading-relaxed text-gray-400">
+                    "Read all the attached resources respective of project."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+              <div
+                class="h-full w-6 absolute inset-0 flex items-center justify-center"
+              >
+                <div class="h-full w-1 bg-gray-400 pointer-events-none"></div>
+              </div>
+              <div
+                class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm"
+              >
+                3
+              </div>
+              <div
+                class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row"
+              >
+                <div
+                  class="flex-shrink-0 w-16 h-16 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-8 h-8"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
+                    />
+                  </svg>
+                </div>
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                  <h2 class="font-medium title-font text-gray-300 mb-1 text-xl">
+                    Order Project via Whatsapp / Call
+                  </h2>
+                  <p class="leading-relaxed text-gray-400">
+                    "Once the project is selected, place a project order via sharing
+                    the copied order text message to our Whatsapp."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+              <div
+                class="h-full w-6 absolute inset-0 flex items-center justify-center"
+              >
+                <div class="h-full w-1 bg-gray-400 pointer-events-none"></div>
+              </div>
+              <div
+                class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm"
+              >
+                4
+              </div>
+              <div
+                class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row"
+              >
+                <div
+                  class="flex-shrink-0 w-16 h-16 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-8 h-8"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                  <h2 class="font-medium title-font text-gray-300 mb-1 text-xl">
+                    Get Your Project Deliver at Home OR in_Personal <br />[ Home Delivery : Mumbai - Maharashtra only ]
+                  </h2>
+                  <p class="leading-relaxed text-gray-400">
+                    "Within 1 to 2 week get your project deliver at your place or take
+                    it in personal near<br />
+                    Mumbai-Parel Station(central line) / Mumbai-Prabhadevi
+                    Station(western line)."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>      
+        <!-- Content for Section 3 goes here -->
+      </div>
+    </div>
+
+    <div id="section4" class="py-16 h-screen">
+      <div class="container mx-auto">
+        <!-- Content for Section 4 goes here -->
+        <section class="text-gray-600 body-font">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+              <h1
+                class="sm:text-4xl text-2xl font-medium title-font mb-4 text-blue-300"
+              >
+                Expanding Horizons
+              </h1>
+              <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-300">
+                " Countless Projects, Countless Success Stories "
+              </p>
+            </div>
+            <div class="flex flex-wrap -m-4 text-center">
+              <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="text-indigo-500 w-12 h-12 mb-3 inline-block"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8 17l4 4 4-4m-4-5v9"></path>
+                    <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
+                  </svg>
+                  <h2 class="title-font font-medium text-3xl text-gray-300">24+</h2>
+                  <p class="leading-relaxed text-gray-400">Projects</p>
+                </div>
+              </div>
+              <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="text-indigo-500 w-12 h-12 mb-3 inline-block"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+                  </svg>
+                  <h2 class="title-font font-medium text-3xl text-gray-300">22+</h2>
+                  <p class="leading-relaxed text-gray-400">Customers</p>
+                </div>
+              </div>
+              <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="text-indigo-500 w-12 h-12 mb-3 inline-block"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0118 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3l1.5 1.5 3-3.75"
+                    />
+                  </svg>
+      
+                  <h2 class="title-font font-medium text-3xl text-gray-300">13+</h2>
+                  <p class="leading-relaxed text-gray-400">Free Certified Courses</p>
+                </div>
+              </div>
+              <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="text-indigo-500 w-12 h-12 mb-3 inline-block"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
+                    />
+                  </svg>
+                  <h2 class="title-font font-medium text-3xl text-gray-300">0</h2>
+                  <p class="leading-relaxed text-gray-400">Give Away !!!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Content for Section 4 goes here -->
+      </div>
+    </div>
+
+    <div id="section5" class="py-16 h-screen">
+      <div class="container mx-auto">
+        <h1 class="text-3xl font-bold">Section 5</h1>
+        <!-- Content for Section 5 goes here -->
+      </div>
+    </div>
+
+    <!-- footer -->
+  <footer class="bg-gray-800">
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+          <a href="/" class="flex items-center">
+            <img src="Static\images\hmp_logo.png" class="h-8 mr-3" alt="HMP Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-blue-400">HandMadeProjects</span>
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-100 uppercase">Resources</h2>
+            <ul class="text-gray-500 font-medium">
+              <li class="mb-4">
+                <a href="https://github.com/HandMadeProjects" 
+                    target="_blank" class="hover:underline text-gray-400">GitHub</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UCGB2khsxMMPxsji1yTTkSAw" target="_blank"
+                  class="hover:underline text-gray-400">Youtube Channel</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-100 uppercase ">Follow us</h2>
+            <ul class="text-gray-500 font-medium">
+              <li class="mb-4">
+                <a href="https://www.facebook.com/handmadeprojects2022" target="_blank" class="hover:underline text-gray-400">Facebook Page</a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/handmadeprojects_2022/" target="_blank" class="hover:underline text-gray-400">Instagram Page</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-100 uppercase ">Services</h2>
+            <ul class="text-gray-500 font-medium">
+              <li class="mb-4">
+                <a href="/projectlist/computer-science" class="hover:underline text-gray-400">Computer Projects</a>
+              </li>
+              <li class="mb-4">
+                <a href="/projectlist/electronics" class="hover:underline text-gray-400">Electronics Projects</a>
+              </li>
+              <li>
+                <a href="/projectlist/iotproject" class="hover:underline text-gray-400">IoT Projects</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+      <div class="flex sm:items-center sm:justify-between">
+        <span class="text-sm text-white font-bold sm:text-center">Atharva : 8169239027</span>
+        <span class="text-sm text-white font-bold sm:text-left ml-4 md:ml-1">Sahil : 9082271516</span>
+        <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+          <a href="https://www.facebook.com/handmadeprojects2022" target="_blank" class="text-gray-500 hover:text-gray-900">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">Facebook page</span>
+          </a>
+          <a href="https://www.instagram.com/handmadeprojects_2022/" target="_blank" class="text-gray-500 hover:text-gray-900">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">Instagram page</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </body>
+</html>
